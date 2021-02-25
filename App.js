@@ -2,6 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet,View, Text, ImageBackground,TouchableOpacity,Image} from 'react-native';
 import auth from '@react-native-firebase/auth';
+import MyStack from './Route/homeStack';
+import 'react-native-gesture-handler';
+
 
 export default function App() {
   // Set an initializing state whilst Firebase connects
@@ -22,17 +25,7 @@ export default function App() {
   if (initializing) return null;
   if (!user) {
     return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-            <View style={styles.login_container}>
-              
-                <StatusBar style="auto" />
-                <Image style={styles.logo} source={require("./resources/startScreen.png")}/>
-                <TouchableOpacity style={styles.loginBtn}>
-                 <Text style={styles.loginBtnText}>LOGIN HERE</Text>
-                </TouchableOpacity>
-            </View>
-    </View>
+      <MyStack></MyStack>
     );
   }
 

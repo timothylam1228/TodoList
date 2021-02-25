@@ -1,93 +1,78 @@
 import React, { useState } from 'react';
 import { StatusBar } from "expo-status-bar";
-import {
-    StyleSheet,
-    Text,
-    View,
-    Input,
-    Icon,
-    ImageBackground,
-    TextInput,
-    Button,
-    TouchableOpacity,
-  } from "react-native";
-  
+import {StyleSheet,Text,View,TouchableOpacity,Image} from "react-native";
 
-export default function Home() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [showLoading, setShowLoading] = useState(false);
+
+function Home ({navigation}) {
       return (
         <View style={styles.container}>
-    
-          <StatusBar style="auto" />
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.TextInput}
-              placeholder="Email."
-              placeholderTextColor="#003f5c"
-              onChangeText={(email) => setEmail(email)}
-            />
-          </View>
-    
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.TextInput}
-              placeholder="Password."
-              placeholderTextColor="#003f5c"
-              secureTextEntry={true}
-              onChangeText={(password) => setPassword(password)}
-            />
-          </View>
-    
-          <TouchableOpacity>
-            <Text style={styles.forgot_button}>Forgot Password?</Text>
-          </TouchableOpacity>
-    
-          <TouchableOpacity style={styles.loginBtn}>
-            <Text style={styles.loginText}>LOGIN</Text>
-          </TouchableOpacity>
-        </View>
+        <StatusBar style="auto" />
+              <View style={styles.login_container}>
+                  <StatusBar style="auto" />
+                  <Image style={styles.logo} source={require("../resources/startScreen.png")}/>
+                  <TouchableOpacity style={styles.loginBtn} onPress={()=>
+                    navigation.navigate('Login', { name: 'Login' })}>
+                   <Text style={styles.loginBtnText}>LOGIN HERE</Text>
+                  </TouchableOpacity>
+              </View>
+      </View>
       );
             
 }
+
+export default Home;
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center"
   },
-
-  image: {
-    marginBottom: 40,
+  login_container: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center"
+  },
+  logo:{
+    width:300,
+    height:400,
+    resizeMode:'contain'
   },
 
   inputView: {
-    borderRadius: 30,
-    width: "70%",
-    height: 45,
-    marginBottom: 20,
-    alignItems: "center",
-  },
+      backgroundColor: "#FFC0CB",
+      borderRadius: 30,
+      width: "70%",
+      height: 45,
+      marginBottom: 20,
+      alignItems: "center",
+    },
+    baseText: {
+      fontFamily: "Arial"
+    },
+  
+    TextInput: {
+      height: 50,
+      flex: 1,
+      padding: 10,
+      marginLeft: 20,
+    },
 
-  TextInput: {
-    height: 50,
-    flex: 1,
-    padding: 10,
-    marginLeft: 20,
-  },
+    loginBtn: {
+      marginVertical: 10,
+          borderRadius: 10,        
+          justifyContent: 'center',        
+          alignItems: 'center',       
+          padding: 15,       
+          width: '80%',       
+          backgroundColor: '#FFA31A',
+          top:150
+    },
+    loginBtnText: {
+      fontFamily: "Arial",
+      fontSize: 18,
+      fontWeight: '700',
+      textTransform: 'uppercase',
+      fontWeight: "bold"
 
-  forgot_button: {
-    height: 30,
-    marginBottom: 30,
-  },
-
-  loginBtn: {
-    width: "80%",
-    borderRadius: 25,
-    height: 50,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 40  },
-});
+      }
+  });
