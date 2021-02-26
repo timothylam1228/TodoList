@@ -12,7 +12,11 @@ function Home ({navigation}) {
                   <Image style={styles.logo} source={require("../resources/startScreen.png")}/>
                   <TouchableOpacity style={styles.loginBtn} onPress={()=>
                     navigation.navigate('Login', { name: 'Login' })}>
-                   <Text style={styles.loginBtnText}>LOGIN HERE</Text>
+                   <Text style={styles.loginBtnText}>LOGIN</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.loginBtn} onPress={()=>
+                    navigation.navigate('Signup', { name: 'Signup' })}>
+                   <Text style={styles.loginBtnText}>Sign Up</Text>
                   </TouchableOpacity>
               </View>
       </View>
@@ -33,28 +37,25 @@ const styles = StyleSheet.create({
       justifyContent: "center"
   },
   logo:{
-    width:300,
-    height:400,
     resizeMode:'contain'
+    },
+    image: {
+      flex: 1,
+      width: null,
+      height: null,
+      resizeMode: 'contain'
   },
 
   inputView: {
       backgroundColor: "#FFC0CB",
       borderRadius: 30,
-      width: "70%",
+      width: "190%",
       height: 45,
       marginBottom: 20,
       alignItems: "center",
     },
     baseText: {
       fontFamily: "Arial"
-    },
-  
-    TextInput: {
-      height: 50,
-      flex: 1,
-      padding: 10,
-      marginLeft: 20,
     },
 
     loginBtn: {
@@ -72,7 +73,9 @@ const styles = StyleSheet.create({
       fontSize: 18,
       fontWeight: '700',
       textTransform: 'uppercase',
-      fontWeight: "bold"
+      fontWeight: "bold",
+      width:100,
+      textAlign:"center",
 
       }
   });

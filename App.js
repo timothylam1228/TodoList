@@ -30,7 +30,7 @@ export default function App() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Welcome {user.email}</Text>
     </View>
   );
