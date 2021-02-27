@@ -22,20 +22,20 @@ export default function Signup() {
         <TextInput
             style={styles.inputBox}
             value={name}
-            onChangeText={name => setName({ name })}
+            onChangeText={name => setName (name.name)}
             placeholder='Full Name'
         />
         <TextInput
             style={styles.inputBox}
             value={email}
-            onChangeText={email => setEmail({ email })}
+            onChangeText={email => setEmail(email.email)}
             placeholder='Email'
             autoCapitalize='none'
         />
         <TextInput
             style={styles.inputBox}
             value={password}
-            onChangeText={password => setPassword({ password })}
+            onChangeText={password => setPassword(password.password)}
             placeholder='Password'
             secureTextEntry={true}
         />

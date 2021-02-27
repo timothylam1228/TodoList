@@ -1,5 +1,5 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from '../AuthHome/Home';
+import AuthHome from '../AuthHome/AuthHome';
 import Login from '../Login/Login'
 import React from 'react';
 import Signup from '../Login/Signup';
@@ -11,7 +11,9 @@ const MyStack = () => {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home"   component={Home} options={{headerShown: false}}/>
+          
+          <Stack.Screen name="AuthHome" component={AuthHome} options={{headerShown: false}}/>
+
           <Stack.Screen name="Login" component={Login}  options={{headerShown: false}}/>
           <Stack.Screen name="Signup" component={Signup} options={{headerShown:false}}/>
         </Stack.Navigator>

@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet,View, Text, ImageBackground,TouchableOpacity,Image} from 'react-native';
+import { StyleSheet,View, Text, ImageBackground,TouchableOpacity,Image, TouchableOpacityBase} from 'react-native';
 import auth from '@react-native-firebase/auth';
-import MyStack from './Route/homeStack';
+import MyStack from './Route/authStack';
 import 'react-native-gesture-handler';
 
 
@@ -16,12 +16,16 @@ export default function App() {
     setUser(user);
     if (initializing) setInitializing(false);
   }
-
-  
   useEffect(() => {
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
     return subscriber; // unsubscribe on unmount
   }, []);
+
+  function signOut(){
+    auth()
+  .signOut()
+  .then(() => console.log('User signed out!'));
+  }
   if (initializing) return null;
   if (!user) {
     return (
@@ -31,7 +35,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity style={styles.button} onPress={signOut}>
       <Text>Welcome {user.email}</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -64,35 +70,18 @@ const styles = StyleSheet.create({
     baseText: {
       fontFamily: "Arial"
     },
-  
-    TextInput: {
-      height: 50,
-      flex: 1,
-      padding: 10,
-      marginLeft: 20,
-    },
-  
-    forgot_button: {
-      height: 30,
-      marginBottom: 30,
-    },
-  
-    loginBtn: {
-      marginVertical: 10,
-          borderRadius: 10,        
-          justifyContent: 'center',        
-          alignItems: 'center',       
-          padding: 15,       
-          width: '80%',       
-          backgroundColor: '#FFA31A',
-          top:150
-    },
-    loginBtnText: {
-      fontFamily: "Arial",
-      fontSize: 18,
-      fontWeight: '700',
-      textTransform: 'uppercase',
-      fontWeight: "bold"
+    button: {
+      marginTop: 30,
+      marginBottom: 20,
+      paddingVertical: 5,
+      alignItems: 'center',
+      backgroundColor: '#F6820D',
+      borderColor: '#F6820D',
+      borderWidth: 1,
+      borderRadius: 5,
+      width: 200
+  },
 
-      }
+
+ 
   });

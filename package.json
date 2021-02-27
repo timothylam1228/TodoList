@@ -19,6 +19,7 @@
     "expo": "^40.0.1",
     "expo-status-bar": "~1.0.3",
     "joi": "^17.4.0",
+    "popup-ui": "^1.2.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "^0.63.4",
@@ -28,6 +29,7 @@
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.9",
     "react-native-screens": "~2.15.2",
+    "react-native-toast-message": "^1.4.7",
     "react-native-web": "~0.13.12",
     "typescript": "^4.2.2"
   },
