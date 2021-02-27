@@ -3,7 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import {StyleSheet,Text,View,TouchableOpacity,Image} from "react-native";
 
 
-function Home ({navigation}) {
+function AuthHome ({navigation}) {
       return (
         <View style={styles.container}>
         <StatusBar style="auto" />
@@ -24,7 +24,7 @@ function Home ({navigation}) {
             
 }
 
-export default Home;
+export default AuthHome;
 const styles = StyleSheet.create({
   container: {
       flex: 1,

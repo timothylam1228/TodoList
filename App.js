@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet,View, Text, ImageBackground,TouchableOpacity,Image, TouchableOpacityBase} from 'react-native';
 import auth from '@react-native-firebase/auth';
 import MyStack from './Route/authStack';
+import MainStack from './Route/mainStack';
 import 'react-native-gesture-handler';
 
 
@@ -34,11 +35,9 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={signOut}>
-      <Text>Welcome {user.email}</Text>
-      </TouchableOpacity>
-    </View>
+    <MainStack></MainStack>
+    // <MyStack></MyStack>
+
   );
 }
 
