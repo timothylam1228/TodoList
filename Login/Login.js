@@ -36,7 +36,7 @@ export default function Login({navigation}) {
     auth()
         .signInWithEmailAndPassword(email, password)
         .then(() => {
-           this.props.navigation.navigate('Home');
+           //this.props.navigation.navigate('Home');
         })
         .catch(error  => { 
             console.log(String(error));
