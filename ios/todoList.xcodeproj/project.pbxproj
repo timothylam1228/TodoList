@@ -42,10 +42,10 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* todoListiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todoListiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* todoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* todoListiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = todoListiOSTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* todoListiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoListiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* todoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = todoListiOS/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = todoListiOS/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = todoListiOS/Images.xcassets; sourceTree = "<group>"; };
@@ -53,8 +53,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = todoListiOS/main.m; sourceTree = "<group>"; };
 		1D1D27B4F6A4F3EC2F875F4B /* libPods-todoListiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-todoListiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		250DB5DC8B804B2517CDCEFB /* Pods-todoListiOS-todoListiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoListiOS-todoListiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-todoListiOS-todoListiOSTests/Pods-todoListiOS-todoListiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* todoListiOS-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todoListiOS-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* todoListiOS-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "todoListiOS-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* todoList-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todoList-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* todoList-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "todoList-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C73D7C35399527553C2B58 /* Pods-todoListiOS-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoListiOS-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-todoListiOS-tvOS/Pods-todoListiOS-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		63D28855805954C50DCE9CBD /* Pods-todoListiOS-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoListiOS-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-todoListiOS-tvOSTests/Pods-todoListiOS-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67345C5295EB2C40CEED7AB9 /* Pods-todoListiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoListiOS.release.xcconfig"; path = "Target Support Files/Pods-todoListiOS/Pods-todoListiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,10 +177,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* todoListiOS.app */,
-				00E356EE1AD99517003FC87E /* todoListiOSTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* todoListiOS-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* todoListiOS-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* todoList.app */,
+				00E356EE1AD99517003FC87E /* todoListTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* todoList-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* todoList-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,9 +203,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* todoListiOSTests */ = {
+		00E356ED1AD99517003FC87E /* todoListTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "todoListiOSTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "todoListTests" */;
 			buildPhases = (
 				798A01E684DD94588206C545 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -219,14 +219,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = todoListiOSTests;
+			name = todoListTests;
 			productName = todoListiOSTests;
-			productReference = 00E356EE1AD99517003FC87E /* todoListiOSTests.xctest */;
+			productReference = 00E356EE1AD99517003FC87E /* todoListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* todoListiOS */ = {
+		13B07F861A680F5B00A75B9A /* todoList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "todoListiOS" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "todoList" */;
 			buildPhases = (
 				61064A5F189D47F936C2A876 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -242,14 +242,14 @@
 			);
 			dependencies = (
 			);
-			name = todoListiOS;
+			name = todoList;
 			productName = todoListiOS;
-			productReference = 13B07F961A680F5B00A75B9A /* todoListiOS.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* todoList.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* todoListiOS-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* todoList-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "todoListiOS-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "todoList-tvOS" */;
 			buildPhases = (
 				398C76740440146A9F413D48 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -262,14 +262,14 @@
 			);
 			dependencies = (
 			);
-			name = "todoListiOS-tvOS";
+			name = "todoList-tvOS";
 			productName = "todoListiOS-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* todoListiOS-tvOS.app */;
+			productReference = 2D02E47B1E0B4A5D006451C7 /* todoList-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* todoListiOS-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* todoList-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "todoListiOS-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "todoList-tvOSTests" */;
 			buildPhases = (
 				A4C0C3E6FAE2D57602444FDE /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -281,9 +281,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "todoListiOS-tvOSTests";
+			name = "todoList-tvOSTests";
 			productName = "todoListiOS-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* todoListiOS-tvOSTests.xctest */;
+			productReference = 2D02E4901E0B4A5D006451C7 /* todoList-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -313,7 +313,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "todoListiOS" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "todoList" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -326,10 +326,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* todoListiOS */,
-				00E356ED1AD99517003FC87E /* todoListiOSTests */,
-				2D02E47A1E0B4A5D006451C7 /* todoListiOS-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* todoListiOS-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* todoList */,
+				00E356ED1AD99517003FC87E /* todoListTests */,
+				2D02E47A1E0B4A5D006451C7 /* todoList-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* todoList-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -648,12 +648,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* todoListiOS */;
+			target = 13B07F861A680F5B00A75B9A /* todoList */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* todoListiOS-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* todoList-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -678,7 +678,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoListiOS.app/todoListiOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoList.app/todoList";
 			};
 			name = Debug;
 		};
@@ -698,7 +698,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoListiOS.app/todoListiOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoList.app/todoList";
 			};
 			name = Release;
 		};
@@ -719,7 +719,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techteam.todoList;
-				PRODUCT_NAME = todoListiOS;
+				PRODUCT_NAME = todoList;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -742,7 +742,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techteam.todoList;
-				PRODUCT_NAME = todoListiOS;
+				PRODUCT_NAME = todoList;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -826,7 +826,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.todoListiOS-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoListiOS-tvOS.app/todoListiOS-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoList-tvOS.app/todoList-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -853,7 +853,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.todoListiOS-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoListiOS-tvOS.app/todoListiOS-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoList-tvOS.app/todoList-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -974,7 +974,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "todoListiOSTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "todoListTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -983,7 +983,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "todoListiOS" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "todoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -992,7 +992,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "todoListiOS-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "todoList-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1001,7 +1001,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "todoListiOS-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "todoList-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1010,7 +1010,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "todoListiOS" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "todoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
