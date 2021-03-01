@@ -5,9 +5,10 @@ import AppAndroid from './AppAndroid';
 import React, { useState, useEffect } from 'react';
 import 'react-native-gesture-handler';
 
+
 export const Body = Platform.select({
     ios: AppiOS,
-    android: AppAndroid
+    android: AppiOS
 });
 
-AppRegistry.registerComponent('todoListiOS', () => Body);
+AppRegistry.registerComponent('TodoList', () => Body);

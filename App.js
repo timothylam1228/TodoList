@@ -3,6 +3,7 @@ import AppiOS from './AppIOS';
 import {name as appName} from './app.json';
 import { StyleSheet, Text, View } from 'react-native';
 import 'react-native-gesture-handler';
+import { firebase } from '../../firebase/config'
 
 import React, { useState, useEffect } from 'react';
 

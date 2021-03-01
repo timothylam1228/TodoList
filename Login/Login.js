@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Image, View, Text ,StyleSheet,TextInput,TouchableOpacity,Button} from 'react-native';
 import auth from '@react-native-firebase/auth';
 import Toast, {BaseToast} from 'react-native-toast-message';
-import LoginStyle from './LoginStyle';
+import styles from './LoginStyle';
 
 const toastConfig = {
     error: ({text1, text2, props, ...rest}) => (
@@ -33,10 +33,12 @@ export default function Login({navigation}) {
 
 
   handleLogin = () =>{
+    
     auth()
         .signInWithEmailAndPassword(email, password)
         .then(() => {
-           //this.props.navigation.navigate('Home');
+          console.log('Login');
+           this.props.navigation.navigate('Home');
         })
         .catch(error  => { 
             console.log(String(error));
