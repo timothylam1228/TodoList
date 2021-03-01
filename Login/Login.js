@@ -33,12 +33,12 @@ export default function Login({navigation}) {
 
 
   handleLogin = () =>{
-    
+    console.log('Login');
     auth()
         .signInWithEmailAndPassword(email, password)
         .then(() => {
           console.log('Login');
-           this.props.navigation.navigate('Home');
+           this.props.navigation.navigate('AuthHome');
         })
         .catch(error  => { 
             console.log(String(error));
@@ -56,6 +56,7 @@ export default function Login({navigation}) {
     <View style={styles.container}>
                   <Image style={styles.logo} source={require("../resources/startScreen.png")}/>
                 <TextInput
+                    allowFontScaling={false}
                     style={styles.inputBox}
                     value={email}
                     onChangeText={event => setEmail(event)}
@@ -63,6 +64,7 @@ export default function Login({navigation}) {
                     autoCapitalize='none'
                 />
                 <TextInput
+                    allowFontScaling={false}
                     style={styles.inputBox}
                     value={password}
                     onChangeText={event => setPassword(event)}
