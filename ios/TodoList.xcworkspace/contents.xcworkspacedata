@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/timothylam/Downloads/TodoList/TodoList/ios/todoList.xcodeproj">
+      location = "container:/Users/timothylam/Downloads/TodoList/TodoList/ios/TodoList.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TodoList.xcodeproj">
    </FileRef>
 </Workspace>

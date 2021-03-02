@@ -5,12 +5,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 # https://firebase.google.com/docs/ios/setup#available-pods
 platform :ios, '11'
 
-target 'todoListiOS' do
+target 'TodoList' do
   config = use_native_modules!
   pod 'Firebase/Analytics'
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'todoListiOSTests' do
+  target 'TodoListTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -25,9 +25,9 @@ target 'todoListiOS' do
   end
 end
 
-target 'todoListiOS-tvOS' do
-  # Pods for todoListiOS-tvOS
-  target 'todoListiOS-tvOSTests' do
+target 'TodoList-tvOS' do
+  # Pods for TodoList-tvOS
+  target 'TodoList-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
