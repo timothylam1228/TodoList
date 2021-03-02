@@ -33,12 +33,10 @@ export default function Login({navigation}) {
 
 
   handleLogin = () =>{
-    console.log('Login');
     auth()
         .signInWithEmailAndPassword(email, password)
         .then(() => {
-          console.log('Login');
-           this.props.navigation.navigate('AuthHome');
+          navigation.navigate('AuthHome');
         })
         .catch(error  => { 
             console.log(String(error));

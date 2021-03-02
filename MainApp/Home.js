@@ -3,8 +3,14 @@ import React from 'react';
 import { StyleSheet,View, Text, ImageBackground,TouchableOpacity,Image, TouchableOpacityBase} from 'react-native';
 import 'react-native-gesture-handler';
 import BottomTabs from './Componment/BottomNav/BottomNav';
+import auth from '@react-native-firebase/auth';
 
 export default function Home () {
+  function signout() {
+    auth()
+    .signOut()
+    .then(() => console.log('User signed out!'));
+  }
     return (
       <View style={styles.container}>
       <StatusBar style="auto" />
@@ -13,7 +19,9 @@ export default function Home () {
         <Text>asd</Text>
         <Text>asd</Text>
         <Text>asd</Text>
-        <BottomTabs></BottomTabs>
+        <TouchableOpacity style={styles.button} onPress={signout}>
+                    <Text style={styles.buttonText}>signout</Text>
+                </TouchableOpacity>
     </View>
     );
 }
