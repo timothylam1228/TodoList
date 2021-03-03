@@ -14,14 +14,14 @@ export default function Home () {
     return (
       <View style={styles.container}>
       <StatusBar style="auto" />
-        <Text>asd</Text>
-        <Text>asd</Text>
-        <Text>asd</Text>
-        <AddButton></AddButton>
+        
         <Text>asd</Text>
         <TouchableOpacity style={styles.button} onPress={signout}>
                     <Text style={styles.buttonText}>signout</Text>
-                </TouchableOpacity>
+        </TouchableOpacity>
+      <View style={styles.addbutton}>
+      <AddButton></AddButton>
+    </View>
     </View>
     );
 }
@@ -31,40 +31,14 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     },
-    login_container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center"
-    },
-    logo:{
-      width:300,
-      height:400,
-      resizeMode:'contain'
-    },
-  
-    inputView: {
-        backgroundColor: "#FFC0CB",
-        borderRadius: 30,
-        width: "70%",
-        height: 45,
-        marginBottom: 20,
-        alignItems: "center",
-      },
-      baseText: {
-        fontFamily: "Arial"
-      },
-      button: {
-        marginTop: 30,
-        marginBottom: 20,
-        paddingVertical: 5,
-        alignItems: 'center',
-        backgroundColor: '#F6820D',
-        borderColor: '#F6820D',
-        borderWidth: 1,
-        borderRadius: 5,
-        width: 200
-    },
-  
-  
-   
+    addbutton:{
+      
+      position: 'absolute',
+      alignItems: 'center',
+      justifyContent: 'center',
+      right: 30,
+      bottom: 50,
+     
+    }
+
     });
