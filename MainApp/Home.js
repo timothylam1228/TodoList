@@ -4,7 +4,7 @@ import { StyleSheet,View, Text, ImageBackground,TouchableOpacity,Image, Touchabl
 import 'react-native-gesture-handler';
 import BottomTabs from './Componment/BottomNav/BottomNav';
 import auth from '@react-native-firebase/auth';
-
+import AddButton from './Componment/AddButton';
 export default function Home () {
   function signout() {
     auth()
@@ -17,7 +17,7 @@ export default function Home () {
         <Text>asd</Text>
         <Text>asd</Text>
         <Text>asd</Text>
-        <Text>asd</Text>
+        <AddButton></AddButton>
         <Text>asd</Text>
         <TouchableOpacity style={styles.button} onPress={signout}>
                     <Text style={styles.buttonText}>signout</Text>
