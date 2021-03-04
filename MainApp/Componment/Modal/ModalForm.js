@@ -10,13 +10,14 @@ import {
 } from 'react-native';
 import 'react-native-gesture-handler';
 import Modal from 'react-native-modal';
+import CloseButton from './CloseButton';
 
 const deviceWidth = Dimensions.get('window').width;
 
 const deviceHeight = Dimensions.get('window').height;
 
 const ModalForm = (props)=> {
-  
+
   const {isVisible,toggleModal} = props;
 
   return (
@@ -25,9 +26,11 @@ const ModalForm = (props)=> {
           deviceWidth={deviceWidth}
           deviceHeight={deviceHeight}>
           <View style={styles.modalContainer}>
+            <View style={styles.buttonContainer}>
             <TouchableOpacity onPress={toggleModal} >
-              <Text>Hide me!</Text>
+              <CloseButton> </CloseButton>
             </TouchableOpacity>
+            </View>
           </View>
         </Modal>
   );
@@ -41,5 +44,11 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     height:500
   },
+  buttonContainer:{
+    position: 'absolute',
+    width:'80%',
+    height: '5%',
+    backgroundColor:'black',
+  }
 });
 export default ModalForm;

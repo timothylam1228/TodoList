@@ -12,7 +12,7 @@ import 'react-native-gesture-handler';
 import auth from '@react-native-firebase/auth';
 import AddButton from './Componment/AddButton';
 import Modal from 'react-native-modal';
-import ModalForm from './Componment/ModalForm';
+import ModalForm from './Componment/Modal/ModalForm';
 const deviceWidth = Dimensions.get('window').width;
 
 const deviceHeight = Dimensions.get('window').height;
