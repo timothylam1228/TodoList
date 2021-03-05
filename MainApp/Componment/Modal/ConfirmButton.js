@@ -9,7 +9,7 @@ import {
 export default function CloseButton() {
   return (
       <View style={styles.closeButton}>
-       <Text>CLose</Text>
+       <Text>Confirm</Text>
     </View>
   );
 }
@@ -22,5 +22,7 @@ const styles = StyleSheet.create({
     height: 40,
     width: '100%',
     borderRadius: 20,
+    
+   
   },
 });
