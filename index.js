@@ -4,6 +4,17 @@ import AppiOS from './AppIOS';
 import AppAndroid from './AppAndroid';
 import React, { useState, useEffect } from 'react';
 import 'react-native-gesture-handler';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+
+const theme = {
+    ...DefaultTheme,
+    roundness: 2,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: '#FFA31A',
+      accent: 'black',
+    },
+  };
 
 // export const Body = Platform.select({
 //     ios: AppiOS,
@@ -11,7 +22,9 @@ import 'react-native-gesture-handler';
 // });
 const Body =()=> {
         return(
-       <AppiOS/>
+            <PaperProvider theme={theme}>
+            <AppiOS />
+          </PaperProvider>
     )
 }
 

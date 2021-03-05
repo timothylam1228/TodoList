@@ -73,10 +73,8 @@ const styles = StyleSheet.create({
     top: 150,
   },
   loginBtnText: {
-    fontFamily: 'Arial',
     fontSize: 18,
     fontWeight: '700',
-    textTransform: 'uppercase',
     fontWeight: 'bold',
     width: 100,
     textAlign: 'center',

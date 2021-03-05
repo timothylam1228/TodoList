@@ -13,11 +13,12 @@ import Modal from 'react-native-modal';
 import CloseButton from './CloseButton';
 import ConfirmButton from './ConfirmButton';
 import { TextInput } from 'react-native-paper';
+import CalendarSelect from './Calendar';
 
 
-const deviceWidth = Dimensions.get('window').width;
-
-const deviceHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+const devheight=  windowHeight*0.55;
 
 const ModalForm = (props) => {
   const {isVisible, toggleModal} = props;
@@ -27,18 +28,21 @@ const ModalForm = (props) => {
   return (
     <Modal
       isVisible={isVisible}
-      deviceWidth={deviceWidth}
-      deviceHeight={deviceHeight}>
+      deviceWidth={windowWidth}
+      deviceHeight={windowHeight}>
       <View style={styles.modalContainer}>
-      
+      <View style={styles.inputContainerStyle}>
         <TextInput
-          style={styles.inputFieldStyle}
-          label="Email"
+        style={styles.inputFieldStyle}
+        mode='outlined'
+          label="Task"
           value={title}
           onChangeText={title => setTitle(title.title)}
         />
-       
-
+      </View>
+      <View style={styles.calendarContainer}>
+      <CalendarSelect></CalendarSelect>
+      </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={toggleModal} style={styles.buttonStyle}>
             <CloseButton> </CloseButton>
@@ -56,26 +60,39 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderColor: 'black',
     backgroundColor: 'white',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     borderRadius: 50,
-    height: 500,
+    height: windowHeight*0.7,
   },
   buttonContainer: {
-    position: 'absolute',
+    position:'absolute',
     justifyContent: 'space-around',
     flexDirection: 'row',
     flex: 1,
     width: '90%',
-    backgroundColor:'blue'
+    top:  devheight, 
+    marginTop:30
+
   },
   buttonStyle: {
     width: '40%',
   },
-  inputFieldStyle:{
-    backgroundColor:'green',
+  inputContainerStyle:{
+    alignItems: 'center',
+    justifyContent: 'center',
     width:'100%',
+    top:'10%'
+  },
+  inputFieldStyle:{
+    width:'80%%',
+  },
+  calendarContainer:{
     
-
+    width:windowWidth*0.7,
+    backgroundColor:'black',
+    top:devheight*0.15,
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 
 });
