@@ -18,7 +18,7 @@ import CalendarSelect from './Calendar';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const devheight=  windowHeight*0.55;
+const devheight=  windowHeight*0.65;
 
 const ModalForm = (props) => {
   const {isVisible, toggleModal} = props;
@@ -62,16 +62,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'flex-start',
     borderRadius: 50,
-    height: windowHeight*0.7,
+    height: windowHeight*0.8,
   },
   buttonContainer: {
     position:'absolute',
     justifyContent: 'space-around',
     flexDirection: 'row',
-    flex: 1,
     width: '90%',
-    top:  devheight, 
-    marginTop:30
+    bottom:30,
 
   },
   buttonStyle: {

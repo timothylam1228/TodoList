@@ -11,6 +11,7 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 
 Icon.loadFont();
+
 export default function AddButton() {
   return (
     <View style={styles.addButton}>

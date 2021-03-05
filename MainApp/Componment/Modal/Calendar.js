@@ -4,6 +4,7 @@ import {StyleSheet, View, ScrollView, Text, TouchableOpacity, Dimensions} from '
 import {Calendar} from 'react-native-calendars';
 
 const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 export default function CalendarSelect() {
     const [selected, setSelected] = useState('');
@@ -16,7 +17,7 @@ export default function CalendarSelect() {
     <Fragment>
     <Calendar
       current={today}
-      style={styles.calendar}
+      style={styles.calendar }
       onDayPress={onDayPress}
       markedDates={{
         [selected]: {
