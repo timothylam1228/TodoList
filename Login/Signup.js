@@ -1,20 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity, Text,Image } from 'react-native';
 import auth from '@react-native-firebase/auth';
-import firebase from '@react-native-firebase/app';
+import firestore from '@react-native-firebase/firestore';
+import Toast, {BaseToast} from 'react-native-toast-message';
 
+const toastConfig = {
+    error: ({text1, text2, props, ...rest}) => (
+        <BaseToast
+        {...rest}
+        style={{ borderLeftColor: 'pink' }}
+        contentContainerStyle={{ paddingHorizontal: 15 }}
+        text1Style={{
+          fontSize: 15,
+          fontWeight: 'bold',
+          fontFamily:'Arial'
+        }}
+        text2Style={{
+            fontSize: 9,
+          fontWeight: 'bold',
+          fontFamily:'Arial'
+        }}
+        text1={text1}
+        text2={text2}
+      />
+        )
+  }
+  
 export default function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
 
     handleSignUp = () =>{
-        console.log(email.email)
-        console.log(password.password)
         auth()
-            .createUserWithEmailAndPassword(email.email, password.password)
-            .then(() => this.props.navigation.navigate('Home'))
-            .catch(error => console.log(error))
+            .createUserWithEmailAndPassword(email, password)
+            .then(() => {
+                this.props.navigation.navigate('Home');
+        })
+        .catch(error  => { 
+            console.log(String(error));
+            Toast.show({
+                type:'error',
+                text1: 'SignUp Failed',
+                text2:String(error),
+                position:'bottom',
+                autoHide:true
+              });
+        });
     }
     return (
         <View style={styles.container}>
@@ -22,26 +54,28 @@ export default function Signup() {
         <TextInput
             style={styles.inputBox}
             value={name}
-            onChangeText={name => setName (name.name)}
+            onChangeText={event => setName(event)}
             placeholder='Full Name'
         />
         <TextInput
             style={styles.inputBox}
             value={email}
-            onChangeText={email => setEmail(email.email)}
+            onChangeText={event => setEmail(event)}
             placeholder='Email'
             autoCapitalize='none'
         />
         <TextInput
             style={styles.inputBox}
             value={password}
-            onChangeText={password => setPassword(password.password)}
+            onChangeText={event => setPassword(event    )}
             placeholder='Password'
             secureTextEntry={true}
         />
         <TouchableOpacity style={styles.button} onPress={handleSignUp}>
             <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
+        <Toast config={toastConfig} ref={(ref) => Toast.setRef(ref)} />
+
     </View>
     );
 }

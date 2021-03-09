@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet } from 'react-native';
-import auth from '@react-native-firebase/auth';
 import MyStack from './Route/authStack';
 import MainStack from './Route/mainStack';
 import 'react-native-gesture-handler';
