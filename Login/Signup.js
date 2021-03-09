@@ -30,12 +30,18 @@ export default function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
+    const ref = firestore().collection('user');
 
     handleSignUp = () =>{
         auth()
             .createUserWithEmailAndPassword(email, password)
             .then(() => {
-                this.props.navigation.navigate('Home');
+                const user = auth().currentUser;
+                ref.doc(user.uid).set({
+                email:user.email,
+                name:name,
+                });
+                // this.props.navigation.navigate('Home');
         })
         .catch(error  => { 
             console.log(String(error));

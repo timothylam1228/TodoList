@@ -16,7 +16,7 @@ export default function CalendarSelect(props) {
   const [selected, setSelected] = useState('');
 
   const onDayPress = (day) => {
-    setSelected(day.dateString);
+    setSelected(day.timestamp);
     props.onDayPress(day);
   };
 

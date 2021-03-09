@@ -5,14 +5,17 @@ import {
   View,
   Text,
   TouchableOpacity,
+  Button
 } from 'react-native';
 import 'react-native-gesture-handler';
 import auth from '@react-native-firebase/auth';
 import AddButton from './Componment/AddButton';
 import ModalForm from './Componment/Modal/ModalForm';
+import firestore from '@react-native-firebase/firestore';
 
 export default function Home() {
   const [isModalVisible, setModalVisible] = useState(false);
+  const ref = firestore().collection('user');
 
   function toggleModal() {
     console.log('parent');
@@ -23,6 +26,10 @@ export default function Home() {
       .signOut()
       .then(() => console.log('User signed out!'));
   }
+  function addto(){
+   
+  }
+
 
   return (
     <View style={styles.container}>
@@ -35,6 +42,7 @@ export default function Home() {
       <TouchableOpacity onPress={signout}>
         <Text style={styles.buttonText}>signout</Text>
       </TouchableOpacity>
+      <Button onPress={addto} title='asd'></Button>
       <ModalForm
         toggleModal={toggleModal}
         isVisible={isModalVisible}></ModalForm>

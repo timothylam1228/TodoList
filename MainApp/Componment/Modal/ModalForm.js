@@ -21,7 +21,7 @@ import firestore from '@react-native-firebase/firestore';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const devheight = windowHeight * 0.65;
-const ref = firestore().collection('user');
+const ref = firestore().collection('todos');
 
 
 const ModalForm = (props) => {
@@ -32,27 +32,26 @@ const ModalForm = (props) => {
   const user = auth().currentUser;
 
   const onDayPress = (day) => {
-    setSelected(day.dateString);
+    setSelected(day.timestamp);
   };
   async function addTodo() {
     await ref.add({
+      userid:user.uid,
       title: title,
       complete: false,
+      date:selected,
     });
     setTitle('');
   }
 
   
-  const uploadData =() =>{
 
-  }
   return (
     <Modal
       isVisible={isVisible}
       deviceWidth={windowWidth}
       deviceHeight={windowHeight}>
       <View style={styles.modalContainer}>
-        <Text>{user}</Text>
         <View style={styles.inputContainerStyle}>
           <TextInput
             style={styles.inputFieldStyle}
@@ -68,6 +67,7 @@ const ModalForm = (props) => {
               setSelected(JSON.stringify(day))
             }></CalendarSelect>
         </View>
+        
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={toggleModal} style={styles.buttonStyle}>
             <CloseButton> </CloseButton>
