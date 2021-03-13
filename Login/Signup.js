@@ -41,6 +41,7 @@ export default function Signup() {
                 email:user.email,
                 name:name,
                 });
+                ref.doc(user.id).add
                 // this.props.navigation.navigate('Home');
         })
         .catch(error  => { 

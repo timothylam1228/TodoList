@@ -15,36 +15,37 @@ import {TextInput, Text} from 'react-native-paper';
 import CalendarSelect from './Calendar';
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
+import moment from 'moment';
 
 
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const devheight = windowHeight * 0.65;
-const ref = firestore().collection('todos');
 
 
 const ModalForm = (props) => {
   const {isVisible, toggleModal} = props;
   const [title, setTitle] = React.useState('');
-  const [selected, setSelected] = useState('');
+  const [selected, setSelected] = useState();
   const [ todo, setTodo ] = useState('');
   const user = auth().currentUser;
+  const ref = firestore().collection('user').doc(user.uid).collection('todos');
 
   const onDayPress = (day) => {
-    setSelected(day.timestamp);
-  };
+    // setSelected(firestore.Timestamp.toDate(day));
+  };  
   async function addTodo() {
+    console.log(user.uid);
+    console.log(new Date(selected))
     await ref.add({
-      userid:user.uid,
       title: title,
       complete: false,
-      date:selected,
-    });
+      date: new Date(selected)
+      ,}); 
     setTitle('');
   }
 
-  
 
   return (
     <Modal
@@ -52,6 +53,7 @@ const ModalForm = (props) => {
       deviceWidth={windowWidth}
       deviceHeight={windowHeight}>
       <View style={styles.modalContainer}>
+        <Text>{selected}</Text>
         <View style={styles.inputContainerStyle}>
           <TextInput
             style={styles.inputFieldStyle}
@@ -64,7 +66,7 @@ const ModalForm = (props) => {
         <View style={styles.calendarContainer}>
           <CalendarSelect
             onDayPress={(day) =>
-              setSelected(JSON.stringify(day))
+              setSelected(day)
             }></CalendarSelect>
         </View>
         

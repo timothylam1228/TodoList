@@ -7,6 +7,9 @@ import {
 } from 'react-native';
 import {Calendar} from 'react-native-calendars';
 import {TextInput} from 'react-native-paper';
+import moment from 'moment';
+import firestore from '@react-native-firebase/firestore';
+
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -15,9 +18,10 @@ export default function CalendarSelect(props) {
   const today = new Date().toString();
   const [selected, setSelected] = useState('');
 
-  const onDayPress = (day) => {
-    setSelected(day.timestamp);
-    props.onDayPress(day);
+  const onDayPressed = (day) => {
+    setSelected(day.dateString);
+    var d = new Date(day.dateString);
+    props.onDayPress(day.timestamp);
   };
 
   return (
@@ -25,7 +29,7 @@ export default function CalendarSelect(props) {
       <Calendar
         current={today}
         style={styles.calendar}
-        onDayPress={onDayPress}
+        onDayPress={onDayPressed}
         markedDates={{
           [selected]: {
             selected: true,

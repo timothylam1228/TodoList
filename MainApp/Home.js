@@ -26,9 +26,6 @@ export default function Home() {
       .signOut()
       .then(() => console.log('User signed out!'));
   }
-  function addto(){
-   
-  }
 
 
   return (
@@ -42,7 +39,6 @@ export default function Home() {
       <TouchableOpacity onPress={signout}>
         <Text style={styles.buttonText}>signout</Text>
       </TouchableOpacity>
-      <Button onPress={addto} title='asd'></Button>
       <ModalForm
         toggleModal={toggleModal}
         isVisible={isModalVisible}></ModalForm>
