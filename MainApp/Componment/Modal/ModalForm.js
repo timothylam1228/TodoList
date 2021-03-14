@@ -15,8 +15,6 @@ import {TextInput, Text} from 'react-native-paper';
 import CalendarSelect from './Calendar';
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
-import moment from 'moment';
-
 
 
 const windowWidth = Dimensions.get('window').width;
@@ -36,8 +34,11 @@ const ModalForm = (props) => {
     // setSelected(firestore.Timestamp.toDate(day));
   };  
   async function addTodo() {
-    console.log(user.uid);
-    console.log(new Date(selected))
+    if (!title.trim()) {
+      alert('Please Enter Title');
+      return;
+    }
+    toggleModal();
     await ref.add({
       title: title,
       complete: false,
