@@ -2,14 +2,18 @@ import React from 'react';
 import firestore from '@react-native-firebase/firestore';
 import { List } from 'react-native-paper';
 import auth from '@react-native-firebase/auth';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-function Todo({ id, title, complete }) {
+Icon.loadFont();
+
+function Todo({ id,complete,date,title }) {
     const user = auth().currentUser;
-
+    console.log(id)
+    console.log(user.uid)
   async function toggleComplete() {
     await firestore()
       .collection('user')
-      .doc(user.id)
+      .doc(user.uid)
       .collection('todos')
       .doc(id)
       .update({
@@ -20,9 +24,10 @@ function Todo({ id, title, complete }) {
   return (
     <List.Item
       title={title}
+      description={date.toDate().toLocaleDateString()}
       onPress={() => toggleComplete()}
       left={props => (
-        <List.Icon {...props} icon={complete ? 'check' : 'cancel'} />
+        <List.Icon {...props} icon={complete ? 'check' : 'checkbox-blank-circle-outline'} />
       )}
     />
   );

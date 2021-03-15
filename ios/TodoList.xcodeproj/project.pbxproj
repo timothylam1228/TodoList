@@ -18,7 +18,7 @@
 		C51C290A25EEA2FE00D0C073 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C51C290925EEA2FE00D0C073 /* AppDelegate.m */; };
 		C555A10425F6A54C00555EED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C555A10325F6A54C00555EED /* GoogleService-Info.plist */; };
 		C572BFAA25F015D100795CF4 /* AppDelegate.m in Resources */ = {isa = PBXBuildFile; fileRef = C51C290925EEA2FE00D0C073 /* AppDelegate.m */; };
-		C572C15425F0245800795CF4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C572C14625F0243800795CF4 /* Info.plist */; };
+		C5CD124725FFE0B400E5900A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C572C14625F0243800795CF4 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -350,7 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C572C15425F0245800795CF4 /* Info.plist in Resources */,
+				C5CD124725FFE0B400E5900A /* Info.plist in Resources */,
 				C555A10425F6A54C00555EED /* GoogleService-Info.plist in Resources */,
 				C572BFAA25F015D100795CF4 /* AppDelegate.m in Resources */,
 				C51C26F725EE96FD00D0C073 /* LaunchScreen.storyboard in Resources */,
@@ -735,7 +735,8 @@
 				C572C1A425F0296C00795CF4 /* en */,
 			);
 			name = Info.plist;
-			sourceTree = "<group>";
+			path = /Users/timothylam/Downloads/TodoList/TodoList/ios;
+			sourceTree = "<absolute>";
 		};
 /* End PBXVariantGroup section */
 

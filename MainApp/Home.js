@@ -20,8 +20,9 @@ import Todo from './Todo'; // we'll create this next
 
 
 export default function Home() {
+  const user = auth().currentUser;
+  const ref = firestore().collection('user').doc(user.uid).collection('todos');
   const [isModalVisible, setModalVisible] = useState(false);
-  const ref = firestore().collection('user');
   const [ todo, setTodo ] = useState('');
   const [ loading, setLoading ] = useState(true);
   const [ todos, setTodos ] = useState([]);
@@ -29,11 +30,15 @@ export default function Home() {
       return ref.onSnapshot(querySnapshot => {
         const list = [];
         querySnapshot.forEach(doc => {
-          const { title, complete } = doc.data();
+          const {complete,date,title} = doc.data();
+          // console.log(doc.id)
+          // console.log(date)
+          // console.log(title)
           list.push({
             id: doc.id,
-            title,
             complete,
+            date,
+            title,
           });
         });
         setTodos(list);
@@ -68,7 +73,7 @@ export default function Home() {
       </Appbar>
 
       <FlatList 
-        style={{flex: 1,paddingTop:30}}
+        style={{flex: 1,paddingTop:30,width:'100%'}}
         data={todos}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <Todo {...item} />}
