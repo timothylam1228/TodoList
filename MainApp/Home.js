@@ -16,7 +16,17 @@ import ModalForm from './Componment/Modal/ModalForm';
 import firestore from '@react-native-firebase/firestore';
 import { Appbar } from 'react-native-paper';
 import Todo from './Todo'; // we'll create this next
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
+
+
+function NotificationsScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Button onPress={() => navigation.goBack()} title="Go back home" />
+    </View>
+  );
+}
 
 
 export default function Home() {
@@ -31,9 +41,6 @@ export default function Home() {
         const list = [];
         querySnapshot.forEach(doc => {
           const {complete,date,title} = doc.data();
-          // console.log(doc.id)
-          // console.log(date)
-          // console.log(title)
           list.push({
             id: doc.id,
             complete,
